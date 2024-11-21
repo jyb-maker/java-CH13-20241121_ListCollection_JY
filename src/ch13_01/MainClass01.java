@@ -21,17 +21,19 @@ public class MainClass01 {
 		memberDtos.add(new MemberDto("강감찬",31,"인천 미추홀구","010-1234-5588","kang@abc.com"));					
 		
 		MemberDto memberDto4 = memberDtos.get(3); // 강감찬 객체 반환 
-		
+
+		memberDtos.remove(3); // 인덱스 3(강감찬) memberDto객체 삭제	
 		for (int i=0;i<memberDtos.size();i++) {  // 배열은 length이고, 리스트는 size로 실행어 작성한다.  
 			String name = memberDtos.get(i).getMname();  // getter 을 활용 
 			int age = memberDtos.get(i).getMage();  // getter 을 활용 			
 			String addr = memberDtos.get(i).getMaddr();  // getter 을 활용 			
 			String phone = memberDtos.get(i).getMphone();  // getter 을 활용 			
 			String email = memberDtos.get(i).getMemail();  // getter 을 활용 			
-			
+		
 			System.out.println(name+"/"+age+"/"+addr+"/"+phone+"/"+email);
 			
 	    }
 //			memberDtos.remove(3); // 인덱스 3(강감찬) memberDto객체 삭제
+			
 	}		
 }
