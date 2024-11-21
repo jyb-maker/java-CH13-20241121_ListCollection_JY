@@ -22,7 +22,7 @@ public class MainClass01 {
 		
 		MemberDto memberDto4 = memberDtos.get(3); // 강감찬 객체 반환 
 
-		memberDtos.remove(3); // 인덱스 3(강감찬) memberDto객체 삭제	
+		memberDtos.remove(3); // 인덱스 3(강감찬) memberDto객체 삭제!!!	
 		for (int i=0;i<memberDtos.size();i++) {  // 배열은 length이고, 리스트는 size로 실행어 작성한다.  
 			String name = memberDtos.get(i).getMname();  // getter 을 활용 
 			int age = memberDtos.get(i).getMage();  // getter 을 활용 			
@@ -34,6 +34,17 @@ public class MainClass01 {
 			
 	    }
 //			memberDtos.remove(3); // 인덱스 3(강감찬) memberDto객체 삭제
+		System.out.println("=============================================");
+		// 향상된 for문
+		for(MemberDto memberDto:memberDtos) { // 향상된 for문 
+			String name = memberDto.getMname();
+			int age = memberDto.getMage();
+			String addr = memberDto.getMaddr();
+			String phone = memberDto.getMphone();
+			String email = memberDto.getMemail();
+			
+			System.out.println(name+"/"+age+"/"+addr+"/"+phone+"/"+email);			
+		}
 			
 	}		
 }
